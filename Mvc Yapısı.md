@@ -31,10 +31,14 @@ use Anonym\Components\Route\Controller;
  */
 class Index extends Controller
 {
-
+   /**
+    * create a new instance
+    *
+    * @return void
+    */
     public function __construct()
     {
-       /do nothing
+       //do nothing
     }
 
 }
@@ -65,6 +69,11 @@ Detaylı kullanım için **`View`** dökümantasyonunu inceleyebilirsiniz.
 
 ```php
 
+   /**
+    * execute the controller
+    *
+    * @return mixed
+    */
     public function boot(){
     
       return view('index');
@@ -95,6 +104,11 @@ Detaylı kullanım için **`Response`** dökümantasyonunu inceleyebilirsiniz.
 
 ```php
 
+   /**
+    * execute the controller
+    *
+    * @return mixed
+    */
     public function boot(){
     
       return 'Hello World';
