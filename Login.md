@@ -1,0 +1,1 @@
+Anonym Framework'de login işlemleri `Anonym\Facades\Login` üzerinden gerçekleştirilir
