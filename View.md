@@ -244,8 +244,11 @@ Ayarları için: [http://www.smarty.net/docs/en/installing.smarty.basic.tpl](htt
 Blade
 ------
 
-Blade `laravel` framework'un kullandığı bir `view` sürücüsüdür. Anonym Frameworkde kullanılabilir.
+Blade `laravel` framework'un kullandığı bir `view` sürücüsüdür. Anonym Framework'e dışardan dahil edilebilir.
 
+Kurulumu için composer ile require etmeniz gerekmektedir.
+
+`composer require philo/laravel-blade=2.*`
 
 Bu sürücünün ayarları ön tanımlı olarak ayarlanmıştır.
 
