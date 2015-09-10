@@ -78,4 +78,5 @@ Query::getAll();  // $_GET değerini döndürür
 
 ```php
 Input::getAll();  // $_POST değerini döndürür
+Request::all();
 ```
