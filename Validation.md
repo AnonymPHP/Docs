@@ -27,7 +27,7 @@ $filterRules = [
     'bio'      => 'noise_words'
 ];
 
-$validation = Validation::validate($_POST, $validationRules, $filterRules);
+$validation = Validation::make($_POST, $validationRules, $filterRules);
 
 ```
 
@@ -43,6 +43,20 @@ if(false === $validation){
 }
 
 ```
+
+Controller İçinde Kullanım
+----------------
+
+```php
+
+public function create(Request $request){
+
+ $this->validate($request, $rules ,$filters);
+
+}
+
+```
+
 
 -----------------
 ****************
