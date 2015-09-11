@@ -57,3 +57,7 @@ Giriş yapma işleminin hangi tablodan ve hangi sütünlardan gerçekleştirilec
 -------------------
 
 > `$role` değişkenin içindek `column` değerine kullanıcının yetkilerinin tablodaki hangi sutunda yer aldığını girmelisiniz.
+
+-------------------
+
+>`$table` değişkenine kullanıcıların hangi tabloda tutulduğunu girmelisiniz.
