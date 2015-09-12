@@ -110,6 +110,20 @@ get('/admin/login', ['as' => 'admin.login', '_controller' => 'Index:boot']);
 
 ```
 
+Controller'ı özelleştirmek
+--------------
+
+Controllerları illaki `App\Http\Controllers\Index` şekliyle depolamak zorunda değilsiniz, kendi istediğiniz bir 
+kullanabilirsiniz.
+
+```php
+
+get('/', ['uses' => 'Your\Namespace\And\Class:boot']);
+
+
+```
+
+bu şekilde kullanım ile sizin belirttiğiniz kontroller kullanılacaktır
 MiddleWare Kayıt Etmek
 --------
 
