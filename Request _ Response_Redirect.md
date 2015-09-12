@@ -253,3 +253,23 @@ Redirect::back();
 Redirect::back(2); 
 
 ```
+
+route()
+-----------
+
+Kullanıcının tanımladığı bir rötaya yönlendirme yapar
+
+```php
+
+get('admin/login', ['as' => 'admin.login', '_controller' => 'Index:boot'];
+
+```
+
+
+-----------
+
+```php
+
+Redirect::route('admin.login');
+
+```
