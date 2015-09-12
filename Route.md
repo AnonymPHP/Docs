@@ -96,6 +96,20 @@ get('/' , [
 
 ```
 
+Rötaya İsim Atamak
+---------------
+
+
+Rötalara isim atayıp daha sonra redirect gibi alanlarda atadığınız rötaya gönderilmesini sağlayabilirsiniz.
+
+İsim atama işlemini 'action` kısmına `as` parametresi ekleyerek yapabilirsiniz
+
+```php
+
+get('/admin/login', ['as' => 'admin.login', '_controller' => 'Index:boot']);
+
+```
+
 MiddleWare Kayıt Etmek
 --------
 
