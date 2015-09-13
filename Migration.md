@@ -110,4 +110,13 @@ class Test extends Migration implements MigrationInterface
      
 ```
 
+Tüm Migration dosyalarını temizlemek
+----------------
 
+Tüm Migration dosyalarını temizlemek için aşağıdaki kodu konsolda çalıştırabilirsiniz
+
+```sh
+
+php anonym migration clean
+
+```
