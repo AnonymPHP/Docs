@@ -263,7 +263,7 @@ Bu sürücünün ayarları ön tanımlı olarak ayarlanmıştır.
     <title>Document</title>
 </head>
 <body>
-     {{ variable }}
+     {{ $variable }}
 </body>
 </html>
 
