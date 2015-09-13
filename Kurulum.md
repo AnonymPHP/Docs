@@ -1,0 +1,1 @@
+`php anonym install`
