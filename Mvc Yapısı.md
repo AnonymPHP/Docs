@@ -24,7 +24,6 @@ Bu yüzden ön tanımlı olarak namespace'i `App\Http\Controllers` dır.
 
 
 namespace App\Http\Controllers;
-use Anonym\Components\Route\Controller;
 /**
  * Class Index
  * @package App\Http\Controllers
