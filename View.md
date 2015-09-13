@@ -269,3 +269,14 @@ Bu sürücünün ayarları ön tanımlı olarak ayarlanmıştır.
 
 
 ```
+
+
+View Dosyalarını Temizlemek
+-------------
+
+Tüm view dosyalarını temizlemek için konsoldan aşağıdaki komutu çalıştırabilirsiniz.
+
+
+```sh
+php anonym clean:view
+```
