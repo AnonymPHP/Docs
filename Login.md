@@ -61,3 +61,15 @@ Giriş yapma işleminin hangi tablodan ve hangi sütünlardan gerçekleştirilec
 -------------------
 
 >`$table` değişkenine kullanıcıların hangi tabloda tutulduğunu girmelisiniz.
+
+
+Login logları
+----------------
+
+yapılan her giriş işlemi veritabanındaki `logins` tablosunda kaydedilir. Bu loglara erişimi `Anonym\Auth\LastLogins` üzerinden yapabilirsiniz.
+
+
+
+**Tüm İşlemleri Çekmek**
+
+
