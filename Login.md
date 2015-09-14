@@ -66,10 +66,49 @@ Giriş yapma işleminin hangi tablodan ve hangi sütünlardan gerçekleştirilec
 Login logları
 ----------------
 
-yapılan her giriş işlemi veritabanındaki `logins` tablosunda kaydedilir. Bu loglara erişimi `Anonym\Auth\LastLogins` üzerinden yapabilirsiniz.
+yapılan her giriş işlemi veritabanındaki `logins` tablosunda kaydedilir. Bu loglara erişimi `Anonym\Facades\LastLogins` üzerinden yapabilirsiniz.
 
+
+--------------
 
 
 **Tüm İşlemleri Çekmek**
 
+```php
 
+$logs = LastLogins::getAllLogins();
+
+```
+
+-----------------
+
+**Son 5 İşlemi Çekmek**
+
+```php
+
+$logs = LastLogins::getLast5Login();
+// $logs = LastLogins::getLoginsWithLimit(5);
+
+```
+
+-------------------
+
+**Tüm Kayıtları Temizlemek**
+
+```php
+
+LastLogins::cleanLogs();
+
+```
+
+
+**Belirli bir kullanıcıya ağit verileri çekmek**
+
+```php
+
+$logs = LastLogins::getAllLogins('yourUsername');
+$logs = LastLogins::getLast5Login('yourUsername');
+$logs = LastLogins::getLoginsWithLimit(10, 'yourUsername');
+
+
+```
