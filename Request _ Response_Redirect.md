@@ -226,7 +226,9 @@ Kullanıcıların girdiği url'e ve zamana göre yönlendirme yapılır.
 Redirect::to('http://yoururl.com', 2);
 
 ```
+
 ---------------
+
 **Direk Yönlendirme**
 ***************
 
@@ -271,5 +273,18 @@ get('admin/login', ['as' => 'admin.login', '_controller' => 'Index:boot'];
 ```php
 
 Redirect::route('admin.login');
+
+```
+
+withErrors()
+--------------
+
+Kullanıcıyı yönlendirirken bazı hataları da göndermek isteyebilirsiniz. Bunun için `withErrors` methodu sizin için kullanışlı olabilir.
+
+```php
+
+Redirect::withErrors([
+   'Giriş Yapılırken Hata'
+]);
 
 ```
