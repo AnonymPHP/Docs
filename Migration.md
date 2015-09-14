@@ -83,9 +83,9 @@ class Test extends Migration implements MigrationInterface
 
           Schema::create('table', function(Table $table){
                 return $table->text('message')
-                       ->int('id', 255) // int türünde sütün ekler, limit 255 dir
-                       ->varchar('username',255) // varchar türünde bir sütün ekler, limiti 255 dir 
-                       ->datetime('datetime') // datetime türünde bir sütün eler
+                       ->int('id', 255)->default(1) // int türünde sütün ekler, limit 255 dir
+                       ->varchar('username',255)->null(false) // varchar türünde bir sütün ekler, limiti 255 dir 
+                       ->datetime('datetime')->null(true) // datetime türünde bir sütün eler
                        ->date('date') //  date türünde bir sütün ekler
                        ->time('time') // time türünde bir sütün ekler
                        ->timestamp('timestamp'); // timestamp türünde bir sütün ekler 
