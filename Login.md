@@ -112,3 +112,12 @@ $logs = LastLogins::getLoginsWithLimit(10, 'yourUsername');
 
 
 ```
+
+
+Auth Controller
+---------------
+
+`App\Http\Controller\Auth\AuthController` sınıfının methodlarını kullanabilirsiniz.
+
+```php 
+
