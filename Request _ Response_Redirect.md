@@ -289,7 +289,9 @@ Redirect::withErrors([
 
 ```
 
-Yönlendirmede kullanılan hataları yakalamak için
+-----------
+
+**Yönlendirmede kullanılan hataları yakalamak için**
 
 ```php
 
@@ -298,5 +300,14 @@ foreach(errors() as $error){
 echo $error;
 
 }
+
+```
+
+**Kaydedilen Hataları Temizlemek**
+
+
+```php
+
+errors('instance')->clean();
 
 ```
