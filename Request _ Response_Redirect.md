@@ -288,3 +288,15 @@ Redirect::withErrors([
 ]);
 
 ```
+
+Yönlendirmede kullanılan hataları yakalamak için
+
+```php
+
+foreach(errors() as $error){
+
+echo $error;
+
+}
+
+```
