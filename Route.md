@@ -75,7 +75,7 @@ Filter methoduna girdiğiniz düzen, `Regex` e uygun olmalıdır.
 
 ```php
 
-get('/{page}', 'Index:boot')->filter('page', '[0-9+]');
+get('/{page}', 'Index:boot')->filter('page', '([0-9+])');
 
 ```
 
@@ -94,7 +94,7 @@ get('/{parameter:yourFilter}', 'Index:boot');
 
 ```php
 
-filter('yourFilter', '[0-9]+');
+filter('yourFilter', '([0-9]+)');
 ```
 
 *****************
