@@ -231,11 +231,7 @@ get('/', [
 
 ```php
 
-public function __construct(){
- 
-   $this->middleware('user.auth');
-
-}
+   $this->middleware('user.auth', $role, $next);
 
 ```
 
