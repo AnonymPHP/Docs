@@ -99,7 +99,7 @@ filter('yourFilter', '[0-9]+');
 
 *****************
 
->eğer daha önceden tanımlamamışsanız `:` den sonrada filtre kuralınızı girebilirsiniz, giriş sırasında `([a-z])` tarzında `()` ile giriş yapmalısınız.
+>eğer daha önceden tanımlamamışsanız `:` den sonrada filtre kuralınızı girebilirsiniz, giriş sırasında `([a-z])` tarzında yani `()` içinde giriş yapmalısınız.
 
 ```php
 
