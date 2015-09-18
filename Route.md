@@ -109,7 +109,7 @@ get('{name:([a-zA-Z]+)}, 'Index:boot');
 
 *******************
 
-Anonym Framework ön tanımlı olarak bazı sabitleri vardır.
+Anonym Framework ön tanımlı olarak bazı filtreleri vardır;
 
 >`:int`    => Sadece sayı değerlerini kabul eder. Örnek: `123456`
 
