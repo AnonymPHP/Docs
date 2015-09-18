@@ -261,7 +261,7 @@ class UserAuth implements MiddlewareInterface, TerminateInterface
     }
 ```
 
-Yetki Kontrolu
+Kullanıcı Yetki Kontrolu
 ---------------
 
 Yetki Kontrolu işlemi `Guard::hasRole` ile gerçekleştirilir. tek parametre alır ve ilk parametrede kullanıcının sahip olmasını istediğiniz
