@@ -111,15 +111,33 @@ get('{name:([a-zA-Z]+)}, 'Index:boot');
 
 Anonym Framework ön tanımlı olarak bazı filtreleri vardır;
 
->`:int`    => Sadece sayı değerlerini kabul eder. Örnek: `123456`
+>`:int`    => Sadece sayı değerlerini kabul eder.
+
+```php
+
+get('/page/{page:int}', 'PageController:page');
+
+```
 
 -----------
 
 >`:string` => Sadece alfabe haflerini kabul eder. Örnek: `asdaAAasd`
 
+```php
+
+get('/message/{message:string}', 'MessageController:message');
+
+```
+
 -------------------
 
 >`:sef`     => Sef link yapılarını kabul eder.      Örnek : `aaa-bbAas123`
+
+```php
+
+get('/profile/{username:self}', 'ProfileController:profile');
+
+```
 
 Controller Namespace'ini değiştirmek.
 ---------
