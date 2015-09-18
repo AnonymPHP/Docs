@@ -56,7 +56,6 @@ get('/{name}', 'Index:hello');
 ```php
 
  public function hello(Request $request, $name){
- 
  }
 
 ```
@@ -74,9 +73,7 @@ Filter methoduna girdiğiniz düzen, `Regex` e uygun olmalıdır.
 
 
 ```php
-
 get('/{page}', 'Index:boot')->filter('page', '([0-9+])');
-
 ```
 
 ---------------
@@ -84,16 +81,13 @@ get('/{page}', 'Index:boot')->filter('page', '([0-9+])');
 >veya filtrelerinizi röta tanımlarkende verebilirsiniz.
 
 ```php
-
 get('/{parameter:yourFilter}', 'Index:boot');
-
 ```
 
 >burdaki `{parameter:yourFilter}` kısmını incelersek `parameter` bizim bulacağımız veri adı, ve `yourFilter` de bizim fitre adımız. Tabiki bu filterleri
 >daha önceden tanımlamış olmamız gerek.
 
 ```php
-
 filter('yourFilter', '([0-9]+)');
 ```
 
@@ -102,11 +96,8 @@ filter('yourFilter', '([0-9]+)');
 >eğer daha önceden tanımlamamışsanız `:` den sonrada filtre kuralınızı girebilirsiniz, giriş sırasında `([a-z])` tarzında yani `()` içinde giriş yapmalısınız.
 
 ```php
-
 get('{name:([a-zA-Z]+)}, 'Index:boot');
-
 ```
-
 *******************
 
 Anonym Framework ön tanımlı olarak bazı filtreleri vardır;
@@ -114,9 +105,7 @@ Anonym Framework ön tanımlı olarak bazı filtreleri vardır;
 >`:int`    => Sadece sayı değerlerini kabul eder.
 
 ```php
-
 get('/page/{page:int}', 'PageController:page');
-
 ```
 
 -----------
@@ -134,16 +123,13 @@ get('/message/{message:string}', 'MessageController:message');
 >`:sef`     => Sef link yapılarını kabul eder.      Örnek : `aaa-bbAas123`
 
 ```php
-
 get('/profile/{username:self}', 'ProfileController:profile');
-
 ```
 
 Controller Namespace'ini değiştirmek.
 ---------
 
 Ön tanımlı olarak `Controller`'lar `App\Http\Controllers` namespace 'i altında depolanır.
-
 ```php
 
 get('/' , [
@@ -152,19 +138,15 @@ get('/' , [
 ])
 
 ```
-
 Rötaya İsim Atamak
 ---------------
-
 
 Rötalara isim atayıp daha sonra redirect gibi alanlarda atadığınız rötaya gönderilmesini sağlayabilirsiniz.
 
 İsim atama işlemini 'action` kısmına `as` parametresi ekleyerek yapabilirsiniz
 
 ```php
-
 get('/admin/login', ['as' => 'admin.login', '_controller' => 'Index:boot']);
-
 ```
 
 Controller'ı özelleştirmek
@@ -174,10 +156,7 @@ Controllerları illaki `App\Http\Controllers\Index` şekliyle depolamak zorunda 
 kullanabilirsiniz.
 
 ```php
-
 get('/', ['uses' => 'Your\Namespace\And\Class:boot']);
-
-
 ```
 
 bu şekilde kullanım ile sizin belirttiğiniz kontroller kullanılacaktır
@@ -189,16 +168,9 @@ Kullanıcıların bir sayfaya giriş yapmaya yetkisi olup olmadığını `Middle
 `Middleware`leri `App\Services\MiddlewareService` sınıfında kaydedebilirsiniz.
 
 ```php
-
-   /**
-     * the list of middlewares
-     *
-     * @var array
-     */
     protected $middleware = [
         'user.auth' => 'App\Middleware\UserAuth'
     ];
-
 ```
 
 ----------
@@ -224,15 +196,12 @@ get('/', [
 ]);
 
 ```
-
--------
+----------
 
 **Controller İçinde Çalıştırma**
 
 ```php
-
    $this->middleware('user.auth', $role, $next);
-
 ```
 
 Middleware Dosyası Düzenlemek
@@ -247,33 +216,9 @@ Middleware dosyası oluşturmak için Anonym Konsol dan aşağıdaki komutu çal
 
 buradaki `UserAuth` oluşturulacak dosya ve sınıf ismidir, bu komutu çalıştırdıktan sonra aşağıdaki gibi bir dosya oluşur.
 
-
 `App/Http/Middleware/UserAuth.php`
 
-
 ```php
-
-<?php
-/**
- * This file belongs to the AnoynmFramework
- *
- * @author vahitserifsaglam <vahit.serif119@gmail.com>
- * @see http://gemframework.com
- *
- * Thanks for using
- */
-
-
-namespace App\Http\Middleware;
-
-use Anonym\Components\HttpClient\Request;
-use Anonym\Components\Route\MiddlewareInterface;
-use Anonym\Components\Route\TerminateInterface;
-
-/**
- * Class UserAuth
- * @package App\Http\Middleware
- */
 class UserAuth implements MiddlewareInterface, TerminateInterface
 {
 
@@ -301,51 +246,19 @@ class UserAuth implements MiddlewareInterface, TerminateInterface
         //
     }
 }
-
-
 ```
-
-
 **`handle`** methodu middleware ilk tetiklendiği zaman yapılan kontroldur, `Request $request` ön tanımlı olarak sürekli gönderilir,
 
 `$role` ve `$next` rötalama kısmında girdiğiniz parametrelere göre işler.
 
 **`terminate`** methodu eğer handle dan dönen değer `true` a eşit değilse tetiklenir. Kullanıcıyı başka bir sayfaya yönlendirmek veya bazı mesajları vermek için birebirdir.
 
-Örnek
------
-******
-
 
 ```php
-    /**
-     * Handle the user access
-     *
-     * @param Request $request the instance of request
-     * @param mixed $role the user role
-     * @param callable|null $next work to be done
-     * @return mixed
-     */
-    public function handle(Request $request, $role, callable $next = null)
-    {
-         if(!Guard::isLogined()){
-            return false;
-         }else{
-            Redirect::to('panel');
-         }
-    }
-
-    /**
-     * terminate the request
-     *
-     * @param Request $request
-     * @return mixed
-     */
     public function terminate(Request $request)
     {
          Redirect::to('/');
     }
-
 ```
 
 Yetki Kontrolu
