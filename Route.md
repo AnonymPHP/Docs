@@ -347,3 +347,15 @@ class UserAuth implements MiddlewareInterface, TerminateInterface
     }
 
 ```
+
+Yetki Kontrolu
+---------------
+
+
+```php
+
+if(!Guard::hasRole(['user', 'admin']){
+     Redirect::route('welcome');
+}
+
+```
