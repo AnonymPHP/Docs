@@ -109,10 +109,16 @@ get('{name:([a-zA-Z]+)}, 'Index:boot');
 
 *******************
 
->Anonym Framework ön tanımlı olarak bazı sabitleri vardır.
+Anonym Framework ön tanımlı olarak bazı sabitleri vardır.
 
 >`:int`    => Sadece sayı değerlerini kabul eder. Örnek: `123456`
+
+-----------
+
 >`:string` => Sadece alfabe haflerini kabul eder. Örnek: `asdaAAasd`
+
+-------------------
+
 >`:sef`     => Sef link yapılarını kabul eder.      Örnek : `aaa-bbAas123`
 
 Controller Namespace'ini değiştirmek.
