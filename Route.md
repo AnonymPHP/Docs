@@ -264,6 +264,10 @@ class UserAuth implements MiddlewareInterface, TerminateInterface
 Yetki Kontrolu
 ---------------
 
+Yetki Kontrolu işlemi `Guard::hasRole` ile gerçekleştirilir. tek parametre alır ve ilk parametrede kullanıcının sahip olmasını istediğiniz
+yetkileri girersiniz. Buradaki yetkiler `LoginService` de belirlediğiniz `$role` değişkenindeki tablo adına göre veritabanınızdan çekilir.
+
+> ilk parametreye `string` veya `array` bir değer girebilirsiniz.
 
 ```php
 
