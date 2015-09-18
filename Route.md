@@ -53,9 +53,6 @@ get('/{name}', 'Index:hello');
 
 >Eğer eşleşme sağlanır $name değeri `Index` controller'in `hello` methoduna parametre olarak gönderilecektir.
 
-**Dikkat:** 
- >Methodlara gönderilen ilk parametre her zaman `Anonym\Components\HttpClient\Request` sınıfının bir örneğidir.
-
 ```php
 
  public function hello(Request $request, $name){
