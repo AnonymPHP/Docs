@@ -82,6 +82,42 @@ get('/{page}', 'Index:boot')->filter('page', '[0-9+]');
 
 ```
 
+---------------
+
+>veya filtrelerinizi röta tanımlarkende verebilirsiniz.
+
+```php
+
+get('/{parameter:yourFilter}', 'Index:boot');
+
+```
+
+>burdaki `{parameter:yourFilter}` kısmını incelersek `parameter` bizim bulacağımız veri adı, ve `yourFilter` de bizim fitre adımız. Tabiki bu filterleri
+>daha önceden tanımlamış olmamız gerek.
+
+```php
+
+filter('yourFilter', '[0-9]+');
+```
+
+*****************
+
+>eğer daha önceden tanımlamamışsanız `:` den sonrada filtre kuralınızı girebilirsiniz, giriş sırasında `([a-z])` tarzında `()` ile giriş yapmalısınız.
+
+```php
+
+get('{name:([a-zA-Z]+)}, 'Index:boot');
+
+```
+
+*******************
+
+>Anonym Framework ön tanımlı olarak bazı sabitleri vardır.
+
+`:int`    => Sadece sayı değerlerini kabul eder. Örnek: `123456`
+`:string` => Sadece alfabe haflerini kabul eder. Örnek: `asdaAAasd`
+`:sef`     => Sef link yapılarını kabul eder.      Örnek : `aaa-bbAas123`
+
 Controller Namespace'ini değiştirmek.
 ---------
 
