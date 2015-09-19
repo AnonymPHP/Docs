@@ -1,6 +1,6 @@
-Anonym Framework'de Rötalandırma işlemleri `Anonym\Facade\Route` sınıfı içinde veya yardımcı fonksiyonlar ile yapılır.
+Anonym Framework'de Rotalandırma işlemleri `Anonym\Facade\Route` sınıfı içinde veya yardımcı fonksiyonlar ile yapılır.
 
->Rötalarınızı `App/Http/routes.php` içinde toplayabilirsiniz.
+>Rotalarınızı `App/Http/routes.php` içinde toplayabilirsiniz.
 
 Yardımcı Methodlar ve Denk Methodları
 -----------
@@ -17,12 +17,12 @@ options() => Route::options() // http istek method u GET ise tetiklenir
 any()     => Route::any() // Herhangi bir methodda tetiklenir
 ```
 
-**Bu Dökümantasyonun devamında yardımcı fonksyionlar ile devam edilecektir**
+**Bu dokümantasyonun devamında yardımcı fonksyionlar ile devam edilecektir**
 ------------------
 
->Basit Rötalandırma için eşleşleşmesi istediğiniz url'i ve eşleşdiğinde hangi controller:method un çağrılacağını belirtmeniz yeterlidir
+>Basit Rotalandırma için eşleşleşmesi istediğiniz url'i ve eşleşdiğinde hangi controller:method un çağrılacağını belirtmeniz yeterlidir
 
-Basit Rötalandırma
+Basit Rotalandırma
 ------------
 
 
@@ -33,10 +33,10 @@ get('/', 'Index:hello');
 
 ```
 
-Parametreleri Rötalandırma
+Parametreleri Rotalandırma
 ------------
 
-Rötalarda parametre belirtmek için `{ }` arasına istediğiniz ismi girebilirsiniz.
+Rotalarda parametre belirtmek için `{ }` arasına istediğiniz ismi girebilirsiniz.
 
 Girdiğiniz isme göre parametreyi filtreden geçirebilirsiniz.
 
@@ -78,7 +78,7 @@ get('/{page}', 'Index:boot')->filter('page', '([0-9+])');
 
 ---------------
 
->veya filtrelerinizi röta tanımlarkende verebilirsiniz.
+>veya filtrelerinizi rota tanımlarkende verebilirsiniz.
 
 ```php
 get('/{parameter:yourFilter}', 'Index:boot');
@@ -138,10 +138,10 @@ get('/' , [
 ])
 
 ```
-Rötaya İsim Atamak
+Rotaya İsim Atamak
 ---------------
 
-Rötalara isim atayıp daha sonra redirect gibi alanlarda atadığınız rötaya gönderilmesini sağlayabilirsiniz.
+Rotalara isim atayıp daha sonra redirect gibi alanlarda atadığınız rotaya gönderilmesini sağlayabilirsiniz.
 
 İsim atama işlemini 'action` kısmına `as` parametresi ekleyerek yapabilirsiniz
 
@@ -178,11 +178,11 @@ Kullanıcıların bir sayfaya giriş yapmaya yetkisi olup olmadığını `Middle
 Middleware'i Yürütmek
 ------
 
-Middleware'i yürütme işini Rötalarınızı belirtirken veya `Controller` içinde yapabilirsiniz.
+Middleware'i yürütme işini Rotalarınızı belirtirken veya `Controller` içinde yapabilirsiniz.
 
 -------
 
-**Rötalama Kısmında Çalıştırma**
+**Rotalama Kısmında Çalıştırma**
 
 ```php
 
@@ -249,7 +249,7 @@ class UserAuth implements MiddlewareInterface, TerminateInterface
 ```
 **`handle`** methodu middleware ilk tetiklendiği zaman yapılan kontroldur, `Request $request` ön tanımlı olarak sürekli gönderilir,
 
-`$role` ve `$next` rötalama kısmında girdiğiniz parametrelere göre işler.
+`$role` ve `$next` rotalama kısmında girdiğiniz parametrelere göre işler.
 
 **`terminate`** methodu eğer handle dan dönen değer `true` a eşit değilse tetiklenir. Kullanıcıyı başka bir sayfaya yönlendirmek veya bazı mesajları vermek için birebirdir.
 
