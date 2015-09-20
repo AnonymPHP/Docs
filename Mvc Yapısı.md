@@ -12,22 +12,7 @@ Bu yüzden ön tanımlı olarak namespace'i `App\Http\Controllers` dır.
 Örnek bir Controller Dosyası aşağdaki gibidir.
 
 ```php
-<?php
-/**
- * This file belongs to the AnoynmFramework
- *
- * @author vahitserifsaglam <vahit.serif119@gmail.com>
- * @see http://gemframework.com
- *
- * Thanks for using
- */
 
-
-namespace App\Http\Controllers;
-/**
- * Class Index
- * @package App\Http\Controllers
- */
 class Index extends Controller
 {
    /**
@@ -45,8 +30,6 @@ class Index extends Controller
 ```
 
 `Controller` Dosyasında Rötalandırma belirttirdiğiniz methodu controller dosyasında oluşturmalısınız.
-
-
 ```php
 
     public function boot(){

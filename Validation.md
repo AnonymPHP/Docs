@@ -1,4 +1,4 @@
-Anonym Framework'de Validation işlemleri `Anonym\Facades\Validation` üzerinden yapılır.
+Anonym Framework'de Validation işlemleri `Validation` üzerinden yapılır.
 
 `Validation` işlemlerinin temeli `GUMP` validatör sınıfıdır.
 

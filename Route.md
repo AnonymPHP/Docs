@@ -1,4 +1,4 @@
-Anonym Framework'de Rotalandırma işlemleri `Anonym\Facade\Route` sınıfı içinde veya yardımcı fonksiyonlar ile yapılır.
+Anonym Framework'de Rotalandırma işlemleri `Route` sınıfı içinde veya yardımcı fonksiyonlar ile yapılır.
 
 >Rotalarınızı `App/Http/routes.php` içinde toplayabilirsiniz.
 

@@ -1,4 +1,4 @@
-Anonym Frameworkde View Olayları `Anonym\Facades\View` üzerinden veya `view()` yardımcı fonksiyonu üzerinden yapılır
+Anonym Frameworkde View Olayları `View` üzerinden veya `view()` yardımcı fonksiyonu üzerinden yapılır
 
 Görüntü Dosyası oluşturma
 ------------

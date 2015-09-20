@@ -1,4 +1,4 @@
-Session işlemleri `Anonym\Facades\Session` sınıfından veya `session` yardımcı fonksiyonu üzerinden gerçekleştirilidr.
+Session işlemleri `Session` sınıfından veya `session` yardımcı fonksiyonu üzerinden gerçekleştirilidr.
 
 
 Veri Çekmek

@@ -1,7 +1,7 @@
 `Request` ve `Response` sınıfları birçok işlemde yardımcı olmak üzere tasarlanmaştır.
 
-`Request` : `Anonym\Facades\Request` üzerinden,
-`Response`: `Anonym\Facades\Response` üzerinden anlatılacaktır
+`Request` : `Request` üzerinden,
+`Response`: `Response` üzerinden anlatılacaktır
 
 
 Response

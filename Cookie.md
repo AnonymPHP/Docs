@@ -1,4 +1,4 @@
-Cookie işlemleri `Anonym\Facades\Cookie` sınıfından veya `cookie` yardımcı fonksiyonu üzerinden gerçekleştirilidr.
+Cookie işlemleri `Cookie` sınıfından veya `cookie()` yardımcı fonksiyonu üzerinden gerçekleştirilidr.
 
 
 Veri Çekmek

@@ -1,4 +1,4 @@
-Anonym Framework de metinleri şifrelemek için `Anonym\Facades\Crypt` sınıfı kullanılır.
+Anonym Framework de metinleri şifrelemek için `Crypt` sınıfı kullanılır.
 
 Metni Şifrelemek
 -----------

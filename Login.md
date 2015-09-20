@@ -1,5 +1,5 @@
-Anonym Framework'de login işlemleri `Anonym\Facades\Login` üzerinden gerçekleştirilir. 
-Giriş Yapılıp Yapılmadığını 'Anonym\Facades\Guard` üzerinden kontrol ederiz.
+Anonym Framework'de login işlemleri `Login` üzerinden gerçekleştirilir. 
+Giriş Yapılıp Yapılmadığını `Guard` üzerinden kontrol ederiz.
 
 
 Yapılandırma
