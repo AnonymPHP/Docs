@@ -1,6 +1,6 @@
-Anonym Framework' de `$_GET` ile ilgili işlemleri `Anonym\Components\HttpClient\Query` üzerinden;
+Anonym Framework' de `$_GET` ile ilgili işlemleri `Query` üzerinden;
 
-`$_POST` ile ilgili işlemleri `Anonym\Components\HttpClient\Input` üzerinden yapabilirsiniz.
+`$_POST` ile ilgili işlemleri `Input` üzerinden yapabilirsiniz.
 
 
 İkiside aynı fonksiyonlar üzerinden benzer işlemleri yaparlar.
