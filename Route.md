@@ -187,7 +187,7 @@ Bazı sayfalarınızda bazı özellikleri tamamen aynı olan rötalarınız olab
 ```php
 
 Route::when('/admin', function(){
-        Route::get('/login', 'AdminController:login'); 
+        Route::get('/login', 'AdminController:login'); //  == Route::get('/admin/login şeklinde girilmesi gerekirdi normalde. 
 });
 
 ```
