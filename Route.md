@@ -17,8 +17,6 @@ options() => Route::options() // http istek method u GET ise tetiklenir
 any()     => Route::any() // Herhangi bir methodda tetiklenir
 ```
 
-**Bu dokümantasyonun devamında yardımcı fonksyionlar ile devam edilecektir**
-------------------
 
 >Basit Rotalandırma için eşleşleşmesi istediğiniz url'i ve eşleşdiğinde hangi controller:method un çağrılacağını belirtmeniz yeterlidir
 
@@ -63,7 +61,7 @@ get('/{name}', 'Index:hello');
 Şeklinde kullanılması gerekir.
 
 
-Paremetre Filtreleme
+Filtreler
 ---------------
 
 Oluşturduğunuz parametrelerin belirli bir düzen içinde olmasını isteyebilirsiniz.
@@ -160,7 +158,8 @@ get('/', ['uses' => 'Your\Namespace\And\Class:boot']);
 ```
 
 bu şekilde kullanım ile sizin belirttiğiniz kontroller kullanılacaktır
-MiddleWare Kayıt Etmek
+
+Middleware'leri kayıt etmek
 --------
 
 Kullanıcıların bir sayfaya giriş yapmaya yetkisi olup olmadığını `Middleware` ler ile kontrol edebilirsiniz.
@@ -175,8 +174,8 @@ Kullanıcıların bir sayfaya giriş yapmaya yetkisi olup olmadığını `Middle
 
 ----------
 
-Middleware'i Yürütmek
-------
+Kayıtlı bir middleware'i yürütmek
+----------------
 
 Middleware'i yürütme işini Rotalarınızı belirtirken veya `Controller` içinde yapabilirsiniz.
 
@@ -261,7 +260,7 @@ class UserAuth implements MiddlewareInterface, TerminateInterface
     }
 ```
 
-Kullanıcı Yetki Kontrolu
+Middleware İle kullanıcı yetki kontrolu
 ---------------
 
 Yetki Kontrolu işlemi `Guard::hasRole` ile gerçekleştirilir. tek parametre alır ve ilk parametrede kullanıcının sahip olmasını istediğiniz
