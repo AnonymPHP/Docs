@@ -174,6 +174,12 @@ Kullanıcıların bir sayfaya giriş yapmaya yetkisi olup olmadığını `Middle
 
 ----------
 
+Rötaları Gruplandırmak
+--------
+
+Bazı sayfalarınızda bazı özellikleri tamamen aynı olan rötalarınız olabilir, herbirine tekrardan yazmakdansa rötaları gruplandırabilirsiniz.
+
+
 Kayıtlı bir middleware'i yürütmek
 ----------------
 
@@ -275,3 +281,4 @@ if(!Guard::hasRole(['user', 'admin']){
 }
 
 ```
+
