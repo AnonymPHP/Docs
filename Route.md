@@ -179,6 +179,19 @@ Rötaları Gruplandırmak
 
 Bazı sayfalarınızda bazı özellikleri tamamen aynı olan rötalarınız olabilir, herbirine tekrardan yazmakdansa rötaları gruplandırabilirsiniz.
 
+`When` ile url'e göre yapılandırma
+------------------
+
+>İlk parametre olarak 'url' i,  ikinci parametreye de `Closure` fonksiyon alır.
+
+```php
+
+Route::when('/admin', function(){
+        Route::get('/login', 'AdminController:login'); 
+});
+
+```
+
 
 Kayıtlı bir middleware'i yürütmek
 ----------------
