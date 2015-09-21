@@ -174,10 +174,10 @@ Kullanıcıların bir sayfaya giriş yapmaya yetkisi olup olmadığını `Middle
 
 ----------
 
-Rötaları Gruplandırmak
+Rotaları Gruplandırmak
 --------
 
-Bazı sayfalarınızda bazı özellikleri tamamen aynı olan rötalarınız olabilir, herbirine tekrardan yazmakdansa rötaları gruplandırabilirsiniz.
+Bazı sayfalarınızda bazı özellikleri tamamen aynı olan rotalarınız olabilir, herbirine tekrardan yazmakdansa rotaları gruplandırabilirsiniz.
 
 `When` ile url'e göre yapılandırma
 ------------------
@@ -191,6 +191,33 @@ Route::when('/admin', function(){
 });
 
 ```
+
+`Group` kullanarak gruplandırma
+------------------
+
+>`group` methodu ile gruplandıracağınız gruplara bazı özellikleri atayabilirsiniz.
+
+
+>İlk parametre olarak grup isminizi,  ikinci parametreye `action` kısmını, 3. parametreyede `Closure` fonksiyon girmeniz gerekmektedir.
+
+```php
+
+Route::when('/admin, function(){
+
+        Route::group('admin',  [ '_middleware' => [
+                'name' => 'user.auth',
+                'role'   => ['devoloper', 'admin']
+        ]], function($route){
+               $route->get('/panel', 'AdminController:panel'); 
+               // Route::get('/panel', 'AdminController:panel');
+        });
+ 
+});
+
+```
+
+Yukardaki kullanımda admin grubunun içinden çağrılan her rotaya `_middleware` eklenir.
+
 
 
 Kayıtlı bir middleware'i yürütmek
@@ -295,3 +322,28 @@ if(!Guard::hasRole(['user', 'admin']){
 
 ```
 
+Rota Eşleşmediği Zaman Yapılacak İşlemi Ayarlamk
+---------------------
+
+Eğer eşleşen bir röta bulunamazsa ön tanımlı olarak `abort(404)` komutu çalıştırılır, bu komutda `resources/views/errors/404.php` içeriğini
+kullanıcıya gösterir.
+
+Bu işlemi `App\Services\RouteService` içinden değiştirebilirsiniz.
+
+```php
+
+App::bind('route.not.found', function () {
+            App::abort(404, 'Page Not Found');
+});
+
+```
+
+>` App::abort(404, 'Page Not Found');` kısmını istediğiniz gibi değiştirebilirsiniz. Örnek olarak kullanıcıyı anasayfaya yönlendirmek istersek
+
+```php
+
+App::bind('route.not.found', function () {
+            Redirect::to('/');
+});
+
+```
