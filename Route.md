@@ -322,6 +322,28 @@ if(!Guard::hasRole(['user', 'admin']){
 
 ```
 
+Eğer Kullanıcının Yetkisi yetersiz ise `App\Services\RouteService` de aşağıdaki kısmı değiştirerek yapılacak işlemi ayarlayabilirsiniz.
+
+```php
+
+   App::bind('route.middleware.failed', function () {
+            throw new MiddlewareException('You can\'t access here, your authority is incorrect');
+   });
+
+```
+
+Örnek Olarak kullanıcıyı başka bir sayfaya göndermek istersek
+
+```php
+
+   App::bind('route.middleware.failed', function () {
+            Redirect::to('/page');
+   });
+
+```
+
+
+
 Rota Eşleşmediği Zaman Yapılacak İşlemi Ayarlamk
 ---------------------
 
@@ -347,3 +369,5 @@ App::bind('route.not.found', function () {
 });
 
 ```
+
+
