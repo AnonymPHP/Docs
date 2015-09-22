@@ -218,7 +218,7 @@ Route::when('/admin, function(){
 
 Yukardaki kullanımda admin grubunun içinden çağrılan her rotaya `_middleware` eklenir.
 
-
+>Ayrıca rotalarınız bir `Closure` fonksiyon bile olsa burda atadığınız middleware'ler görevini yerine getirecektir.
 
 Kayıtlı bir middleware'i yürütmek
 ----------------
