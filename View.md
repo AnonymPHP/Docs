@@ -71,6 +71,10 @@ return view('index', $parameters)->with(lang('tr/index'));
 
 ```
 
+--------------------------
+
+>Çoklu dil dosyalarını dahil etmek
+
 ```php
 
 $languageParameters = lang([
