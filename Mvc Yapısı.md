@@ -135,7 +135,9 @@ use Anonym\Facades\Element;
  * Class User
  * @package App\Models
  */
-class User extends Element {}
+class User extends Element {
+      public $table = 'user';
+}
 
 ```
 
