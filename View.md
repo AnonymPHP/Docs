@@ -10,13 +10,21 @@ view($file, $parameters, $languageParameters);
 
 ```
 
+-------------------
+
+```php
+
+View::make($file, $parameters, $languageParameters);
+
+```
+
 Örnek;
 
 ```php
 
 $view = view('index'); // resources/views/index.php or resources/views/index.blade.php
 
-// View::make('index');
+View::make('index'); // they are same things
 
 ```
 
@@ -43,8 +51,6 @@ $view = view('index', compact('variable'));
 *************
 
 
-Aşağıda `variable` değerinin kullanımını göreceksiniz.
-
 Dil Dosyasını Dahil Etmek
 -----------
 
@@ -57,7 +63,13 @@ return view('index', $parameters, lang('tr/index')); // resources/languages/tr/i
 
 ```
 
-************
+-------------
+
+```php
+
+return view('index', $parameters)->with(lang('tr/index'));
+
+```
 
 ```php
 
