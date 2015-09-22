@@ -121,7 +121,7 @@ get('/message/{message:string}', 'MessageController:message');
 >`:sef`     => Sef link yapılarını kabul eder.      Örnek : `aaa-bbAas123`
 
 ```php
-get('/profile/{username:self}', 'ProfileController:profile');
+get('/profile/{username:sef}', 'ProfileController:profile');
 ```
 
 Controller Namespace'ini değiştirmek.
