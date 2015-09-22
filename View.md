@@ -94,7 +94,7 @@ $content = $view->render();
 
 
 
-```twig
+```php
 
 <!doctype html>
 <html lang="en">
