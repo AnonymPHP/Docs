@@ -124,6 +124,19 @@ get('/message/{message:string}', 'MessageController:message');
 get('/profile/{username:sef}', 'ProfileController:profile');
 ```
 
+-----------------
+
+**Filtrelerle Beraber isteğe bağlı parametreler**
+
+İsteğe bağlı parametrelerinizi de filtreleyebilirsiniz.
+
+```php
+
+get('/blog/{page?:int}', 'BlogController:page');
+
+```
+
+
 Controller Namespace'ini değiştirmek.
 ---------
 
