@@ -1,5 +1,9 @@
 Cookie işlemleri `Cookie` sınıfından veya `cookie()` yardımcı fonksiyonu üzerinden gerçekleştirilidr.
 
+Ayarlar
+--------------
+
+>Ayarları `configs/stroge.php` içinden `cookie` kısmından yapabilirsiniz.
 
 Veri Çekmek
 -------------

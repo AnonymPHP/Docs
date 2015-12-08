@@ -23,7 +23,6 @@ Sürücüler
 
 ```
 
->Seçebileceğiniz
 
 Veri Çekmek
 -------------
