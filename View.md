@@ -71,9 +71,10 @@ return view('index', $parameters)->with(lang('tr/index'));
 
 ```
 
+Çoklu dil dosyalarını dahil etmek
 --------------------------
 
->Çoklu dil dosyalarını dahil etmek
+>Çoklu dil dosyalarını aktif etmek için `lang` fonksiyonuna bir dizi ile hangi dil ve dosyayı kullanacağınızı belirtebilirsimiz.
 
 ```php
 
@@ -83,20 +84,12 @@ $languageParameters = lang([
 ]); // multipile language files
 
 ```
-Çıktıyı Göndermek
---------
-
-View dosyasını controller dosyasında oluşturuyorsanız aşağıdaki işlemi yapmanoz gerekmez. Bu işlem framework tarafından otomatik gerçekleştirilir.
-
-```php
-$content = $view->render();
-```
-
 
 Örnek kullanımlar
 ----------------
 
 
+> `Blade` ile daha detaylı dökümantasyonu `laravel.com` dan alabilirsiniz.
 
 ```php
 
