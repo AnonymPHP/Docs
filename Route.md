@@ -1,6 +1,6 @@
 Anonym Framework'de Rotalandırma işlemleri `Route` sınıfı içinde veya yardımcı fonksiyonlar ile yapılır.
 
->Rotalarınızı `App/Http/routes.php` içinde toplayabilirsiniz.
+>Rotalarınızı `app/Http/routes.php` içinde toplayabilirsiniz.
 
 Yardımcı Methodlar ve Denk Methodları
 -----------

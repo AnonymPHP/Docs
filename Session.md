@@ -1,5 +1,29 @@
 Session işlemleri `Session` sınıfından veya `session` yardımcı fonksiyonu üzerinden gerçekleştirilidr.
 
+Ayarlar
+--------------------
+
+>Sessionla alakalı ayarlarınızı `configs/stroge` içinden `session` kısmından yapabilirsiniz
+
+Sürücüler
+---------------
+
+>Seçebileceğiniz 4 farklı sürücü bulunmaktadır.
+
+```php
+
+      /**
+         * | ****************
+         * |
+         * | driver can be = file, cache, database, php
+         * |
+         * | *****************
+         */
+        'driver' => 'file',
+
+```
+
+>Seçebileceğiniz
 
 Veri Çekmek
 -------------
