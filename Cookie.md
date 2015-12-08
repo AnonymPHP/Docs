@@ -5,6 +5,22 @@ Ayarlar
 
 >Ayarları `configs/stroge.php` içinden `cookie` kısmından yapabilirsiniz.
 
+
+Verileri Şifrelemek
+--------------------
+
+>Verileri şifrelemek aşağıda gözüken `crypting` adlı değeri true yapabilirsiniz.
+
+```php
+
+        /**
+         *  if you put this true, your cookie datas will be encrypted.
+         */
+        'crypting' => false
+
+
+```
+
 Veri Çekmek
 -------------
 
